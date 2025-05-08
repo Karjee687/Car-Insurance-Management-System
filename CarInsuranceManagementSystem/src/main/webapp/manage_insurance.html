@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Manage Insurance</title>
+  <style>
+    body {
+     background: linear-gradient(to right, #74ebd5, #acb6e5);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      animation: fadeIn 1s ease-in-out;
+     
+    }
+    
+
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+      animation: fadeInDown 0.6s ease-out;
+    }
+
+    form {
+      width: 400px;
+      margin: 30px auto;
+      padding: 25px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      animation: fadeIn 1s ease;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="number"] {
+      width: 100%;
+      padding: 10px 14px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+<div class = "form-container">
+
+  <h2>Manage Insurance</h2>
+
+  <form action="AddInsurance" method="post">
+    <label for="car_id">Car ID</label>
+    <input type="number" name="car_id" id="car_id" required>
+
+    <label for="company">Insurance Company</label>
+    <input type="text" name="insurance_company" id="company" required>
+
+    <label for="policy">Policy Number</label>
+    <input type="text" name="policy_number" id="policy" required>
+
+    <label for="start">Start Date</label>
+    <input type="date" name="start_date" id="start" required>
+
+    <label for="end">End Date</label>
+    <input type="date" name="end_date" id="end" required>
+
+    <button type="submit">Save Insurance</button>
+  </form>
+  </div>
+
+</body>
+</html>

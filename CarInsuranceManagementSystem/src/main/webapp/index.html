@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SecureCar Insurance</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .why-choose-title {
+        display: inline-block;
+        background-color: #ffffff; /* You can use rgba for opacity, like rgba(255, 255, 255, 0.8) */
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-size: 2em;
+        color: #333; /* Dark color for better contrast */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+      }
+
+      /* */
+      main {
+        padding: 2rem;
+        color: white;
+        text-align: center;
+      }
+
+      .features {
+        margin-top: 2rem;
+      }
+
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .feature-box {
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 12px;
+        padding: 1rem;
+        text-align: center;
+        color: #333;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .feature-box img {
+        max-width: 64px;
+        margin-bottom: 1rem;
+      }
+
+      .cta {
+        margin-top: 3rem;
+        background-color: rgba(241, 241, 241, 0.15);
+        padding: 2rem;
+        border-radius: 12px;
+      }
+
+      .cta h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .cta p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .cta button {
+        background-color: #0066cc;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+      .cta button:hover {
+        background-color: #004d99;
+      }
+      /* new section*/
+      .main-footer {
+        background-color: #0066cc;
+        text-align: center;
+        padding: 1rem;
+        font-size: 0.9rem;
+        color: #ffffff;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between; /* Push children to edges */
+        align-items: center;
+        background-color: #0066cc;
+        padding: 1rem;
+        color: white;
+      }
+
+      .site-title a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem;
+      }
+
+      .nav-options {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-options li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .nav-options li a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body
+    style="
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+
+      /* Background image settings */
+      background-image: url('largeimages/fortunerimage.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    "
+  >
+    <header>
+      <nav class="navbar">
+        <h1 class="site-title">
+          <a href="#" onclick="showSection('home')">SecureCar Insurance</a>
+        </h1>
+        <ul class="nav-options">
+          <li><a href="index.html" onclick="showSection('home')">Home</a></li>
+          <li><a href="aboutpage.html">About</a></li>
+          <li>
+            <a href="login.html">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <main>
+        <section id="home" class="section active">
+          <h2>Welcome to SecureCar Insurance</h2>
+          <p>Select an option from the navigation menu to proceed.</p>
+
+          <div class="features">
+            <div style="text-align: center">
+              <h2 class="why-choose-title">Why Choose Us?</h2>
+            </div>
+
+            <div class="feature-grid">
+              <div class="feature-box">
+                <img src="https://img.icons8.com/fluency/96/car.png" />
+                <h3>Wide Coverage</h3>
+                <p>Cars, bikes, and commercial vehicles covered.</p>
+              </div>
+              <div class="feature-box">
+                <img src="https://img.icons8.com/fluency/96/handshake.png" />
+                <h3>Trusted Partners</h3>
+                <p>Partnered with top automakers and certified agents.</p>
+              </div>
+              <div class="feature-box">
+                <img src="https://img.icons8.com/fluency/96/money.png" />
+                <h3>Affordable Premiums</h3>
+                <p>Starting at just ₹999/year with EMI options.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta">
+            <h2>Join Thousands of Happy Customers</h2>
+            <p>Insure your vehicle today with India’s most trusted provider.</p>
+            <button onclick="showSection('customer-login')">Get Started</button>
+          </div>
+        </section>
+      </main>
+    </main>
+
+    <footer class="main-footer">
+      &copy; 2025 SecureCar Insurance Co. | All Rights Reserved
+    </footer>
+  </body>
+</html>
